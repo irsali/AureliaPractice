@@ -1,0 +1,201 @@
+{
+  "name": "AureliaPracticeUI",
+  "type": "project:application",
+  "platform": {
+    "id": "aspnetcore",
+    "displayName": "ASP.NET Core",
+    "output": "wwwroot/scripts",
+    "index": "wwwroot/index.html",
+    "baseDir": "./wwwroot",
+    "baseUrl": "scripts"
+  },
+  "transpiler": {
+    "id": "typescript",
+    "displayName": "TypeScript",
+    "fileExtension": ".ts",
+    "dtsSource": [
+      "./custom_typings/**/*.d.ts"
+    ],
+    "source": "src/**/*.ts"
+  },
+  "markupProcessor": {
+    "id": "none",
+    "displayName": "None",
+    "fileExtension": ".html",
+    "source": "src/**/*.html"
+  },
+  "cssProcessor": {
+    "id": "sass",
+    "displayName": "Sass",
+    "fileExtension": ".scss",
+    "source": "src/**/*.scss"
+  },
+  "editor": {
+    "id": "visualstudio",
+    "displayName": "Visual Studio"
+  },
+  "unitTestRunner": {
+    "id": "karma",
+    "displayName": "Karma",
+    "source": "test/unit/**/*.ts"
+  },
+  "paths": {
+    "root": "src",
+    "resources": "resources",
+    "elements": "resources/elements",
+    "attributes": "resources/attributes",
+    "valueConverters": "resources/value-converters",
+    "bindingBehaviors": "resources/binding-behaviors"
+  },
+  "testFramework": {
+    "id": "jasmine",
+    "displayName": "Jasmine"
+  },
+  "build": {
+    "targets": [
+      {
+        "id": "aspnetcore",
+        "displayName": "ASP.NET Core",
+        "output": "wwwroot/scripts",
+        "index": "wwwroot/index.html",
+        "baseDir": "./wwwroot",
+        "baseUrl": "scripts"
+      }
+    ],
+    "loader": {
+      "type": "system",
+      "configTarget": "vendor-bundle.js",
+      "includeBundleMetadataInConfig": "auto",
+      "plugins": [
+        {
+          "name": "text",
+          "extensions": [
+            ".html",
+            ".css"
+          ],
+          "stub": true
+        }
+      ]
+    },
+    "options": {
+      "minify": "stage & prod",
+      "sourcemaps": "dev & stage"
+    },
+    "copyFiles": {
+      "node_modules/syncfusion-javascript/Content/ej/web/common-images/**/*": "wwwroot/common-images",
+      "node_modules/syncfusion-javascript/Content/ej/web/bootstrap-theme/images/**": "wwwroot/images"
+    },
+    "bundles": [
+      {
+        "name": "app-bundle.js",
+        "source": [
+          "[**/*.js]",
+          "**/*.{css,html}"
+        ]
+      },
+      {
+        "name": "vendor-bundle.js",
+        "prepend": [
+          "node_modules/bluebird/js/browser/bluebird.core.js",
+          "node_modules/aurelia-cli/lib/resources/scripts/configure-bluebird.js",
+          "node_modules/systemjs/dist/system.js"
+        ],
+        "dependencies": [
+          "aurelia-binding",
+          "aurelia-bootstrapper",
+          "aurelia-dependency-injection",
+          "aurelia-event-aggregator",
+          "aurelia-framework",
+          "aurelia-history",
+          "aurelia-history-browser",
+          "aurelia-loader",
+          "aurelia-loader-default",
+          "aurelia-logging",
+          "aurelia-logging-console",
+          "aurelia-metadata",
+          "aurelia-pal",
+          "aurelia-pal-browser",
+          "aurelia-path",
+          "aurelia-polyfills",
+          "aurelia-route-recognizer",
+          "aurelia-router",
+          "aurelia-task-queue",
+          "aurelia-templating",
+          "aurelia-templating-binding",
+          {
+            "name": "text",
+            "path": "../node_modules/systemjs-plugin-text",
+            "main": "text"
+          },
+          {
+            "name": "aurelia-templating-resources",
+            "path": "../node_modules/aurelia-templating-resources/dist/amd",
+            "main": "aurelia-templating-resources"
+          },
+          {
+            "name": "aurelia-templating-router",
+            "path": "../node_modules/aurelia-templating-router/dist/amd",
+            "main": "aurelia-templating-router"
+          },
+          {
+            "name": "aurelia-testing",
+            "path": "../node_modules/aurelia-testing/dist/amd",
+            "main": "aurelia-testing",
+            "env": "dev"
+          },
+          "jquery",
+          "jquery-validation",
+          "velocity-animate",
+          "tether",
+          {
+            "name": "bootstrap",
+            "path": "../node_modules/bootstrap/dist/",
+            "main": false,
+            "resources": [
+              "**/*.css",
+              "js/bootstrap.min.js"
+            ]
+          },
+          {
+            "name": "aurelia-bootstrap",
+            "main": "index",
+            "path": "../node_modules/aurelia-bootstrap/dist/amd",
+            "resources": [
+              "**/*.html"
+            ]
+          },
+
+          {
+            "name": "aurelia-syncfusion-bridge",
+            "path": "../node_modules/aurelia-syncfusion-bridge/dist/amd",
+            "main": "index",
+            "resources": [
+              "**/*.js"
+            ]
+          },
+          {
+            "name": "syncfusion-javascript",
+            "path": "../node_modules/syncfusion-javascript/",
+            "main": false,
+            "resources": [
+              "Content/ej/web/ej.widgets.core.bootstrap.min.css",
+              "Content/ej/web/bootstrap-theme/ej.theme.min.css",
+              "Content/ej/web/responsive-css/ej.responsive.css"
+            ]
+          },
+          {
+            "name": "jsrender",
+            "path": "../node_modules/jsrender/",
+            "main": "jsrender"
+          },
+          {
+            "name": "aurelia-validation",
+            "main": "aurelia-validation",
+            "path": "../node_modules/aurelia-validation/dist/amd",
+            "resources": []
+          }
+        ]
+      }
+    ]
+  }
+}

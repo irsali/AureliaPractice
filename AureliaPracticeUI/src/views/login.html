@@ -1,0 +1,32 @@
+<template>
+
+  <div style="width:100%">
+    <div align="center" style="width:500px;position: absolute;top:20%;bottom: 0;left: 0;right: 0;margin: auto;">
+
+      <form class="form-horizontal" show.bind="!isLogin" style="border-width:1px;border-style:groove;border-radius:3px;padding:20px">
+        <h1>Login Form</h1>
+
+        <div class="form-group row">
+          <label class="col-sm-3 control-label">User Email</label>
+          <div class="col-sm-9">
+            <input placeholder="User Email" type="text" class="form-control" ej-mask-edit="e-value.two-way:loginModel.UserName & validate;e-width.bind:'100%';" />
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label class="col-sm-3 control-label">Password</label>
+          <div class="col-sm-9">
+            <input placeholder="Password" type="password" class="form-control" ej-mask-edit="e-value.two-way:loginModel.Password & validate;e-width.bind:'100%';" />
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <button click.trigger="loginAction()" show.bind="!isLogin" class="btn btn">login</button>
+          <button click.trigger="logout()" show.bind="isLogin" class="btn btn">logout</button>
+        </div>
+
+      </form>
+    </div>
+
+  </div>
+</template>

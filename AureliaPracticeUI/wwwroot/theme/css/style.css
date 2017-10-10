@@ -1,0 +1,174 @@
+header .navbar-nav {
+  margin-right: 0; }
+  header .navbar-nav li a {
+    padding: 9px 15px 14px;
+    margin-top: 9px; }
+    header .navbar-nav li a i {
+      color: #fff;
+      font-size: 24px; }
+header .dropdown-menu {
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.34902);
+  -moz-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.34902);
+  -ms-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.34902);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.34902);
+  border-color: transparent;
+  width: 220px;
+  padding: 5px 0 20px;
+  border-radius: 0px; }
+  header .dropdown-menu li a {
+    display: block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #53B2E2; }
+    header .dropdown-menu li a:focus, header .dropdown-menu li a:hover {
+      color: #53B2E2;
+      text-decoration: underline;
+      background: none; }
+header .open a {
+  background-color: #fff !important; }
+header .open i {
+  color: #61b2e1 !important; }
+
+aside {
+  background-color: #3b4c60;
+  width: 250px;
+  height: calc(100% - 60px);
+  padding-bottom: 100px;
+  position: absolute;
+  left: 0;
+  top: 60px;
+  bottom: 0px; }
+  aside .dropdown-menu {
+    position: relative;
+    float: none;
+    margin: 0px;
+    box-shadow: none;
+    background-color: #6e84a0;
+    border: 0px; }
+  aside aside .dropdown.open a {
+    background-color: #6e84a0 !important; }
+  aside .panel-group {
+    margin-bottom: 0px; }
+    aside .panel-group .panel {
+      border-radius: 0px; }
+  aside .panel,
+  aside .panel div {
+    border: 0px;
+    border-radius: 0px !important; }
+  aside .panel-default .panel-heading {
+    background-color: #6e84a0;
+    color: #fff;
+    padding: 19px 15px; }
+    aside .panel-default .panel-heading:hover, aside .panel-default .panel-heading:focus {
+      background-color: rgba(83, 178, 226, 0.8);
+      color: #fff; }
+      aside .panel-default .panel-heading:hover a, aside .panel-default .panel-heading:focus a {
+        color: #fff !important; }
+    aside .panel-default .panel-heading.active a, aside .panel-default .panel-heading:focus a {
+      text-decoration: none; }
+    aside .panel-default .panel-heading.active {
+      background-color: #53b2e2;
+      color: #fff;
+      text-transform: uppercase;
+      text-decoration: none; }
+  aside .panel-default .panel-title:focus {
+    color: #fff; }
+  aside .panel-default .panel-title i {
+    margin-right: 10px; }
+  aside .panel-collapse {
+    background-color: #546d8b; }
+    aside .panel-collapse .panel-body {
+      padding: 0px; }
+      aside .panel-collapse .panel-body ul li a {
+        color: #fff;
+        padding-left: 37px;
+        font-size: 15px; }
+        aside .panel-collapse .panel-body ul li a.active {
+          background-color: #4b627d;
+          text-transform: uppercase; }
+        aside .panel-collapse .panel-body ul li a:focus, aside .panel-collapse .panel-body ul li a:hover {
+          background-color: #4b627d; }
+        aside .panel-collapse .panel-body ul li a i {
+          margin-left: -16px;
+          right: -6px;
+          position: relative;
+          top: 9px;
+          line-height: 0;
+          width: 15px;
+          font-size: 12px;
+          float: right; }
+    aside .panel-collapse .panel-body,
+    aside .panel-collapse .list-group {
+      border-top: 0; }
+
+.panel-group .panel-heading + .panel-collapse > .list-group,
+.panel-group .panel-heading + .panel-collapse > .panel-body {
+  border-top: 0; }
+
+footer {
+  background: #637894;
+  color: #FFF;
+  padding: 20px 0 40px 0;
+  border-bottom-right-radius: 6px; }
+  footer p {
+    text-transform: capitalize;
+    font-size: 12px; }
+
+.inner-footer {
+  width: calc(100% - 250px);
+  margin: -100px 0 0 250px; }
+
+body {
+  font: 100% "Roboto", sans-serif; }
+
+.navbar-brand {
+  padding: 20px 0px;
+  height: auto;
+  background-image: url(../images/crowfordLogo.png);
+  background-size: 100%;
+  width: 121px;
+  height: 40px;
+  margin: 10px 0 10px 0; }
+
+.navbar {
+  border-radius: 0;
+  margin-bottom: 0px; }
+
+.navbar-default {
+  background-color: #526377;
+  border: 0; }
+
+.panel-group .panel {
+  border-radius: 0px; }
+  .panel-group .panel + .panel {
+    margin-top: 0px; }
+
+.panel-collapse.in + .panel-heading {
+  background-color: #53b2e2;
+  color: #fff; }
+
+section section {
+  height: 100%;
+  display: table-cell;
+  padding-bottom: 100px; }
+
+.position-relative {
+  position: relative; }
+
+.nextmenu {
+  padding: 0px; }
+  .nextmenu li a {
+    padding-left: 55px !important;
+    font-size: 14px;
+    padding: 10px 0 10px 0; }
+
+.font-16 {
+  font-size: 20px !important; }
+
+.margin-top-minus-1 {
+  margin-top: -1px; }
+
+aside.panel-group {
+  margin-bottom: 0px; }
+
+/*# sourceMappingURL=style.css.map */

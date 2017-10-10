@@ -1,0 +1,121 @@
+﻿<template>
+
+  <div class="container-fluid wrapper">
+    <header class="row">
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html"></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-plus-circle"></i></a>
+              <ul class="dropdown-menu">
+                <li><a href="javascript:void(0);">Add New Occurrence</a></li>
+                <li><a href="javascript:void(0);">Add Notice of Loss</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i></a>
+              <ul class="dropdown-menu">
+                <li><a href="javascript:void(0);">Change my password</a></li>
+                <li><a href="javascript:void(0);" click.trigger="logoutAction()">Log out</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-question-circle"></i></a>
+              <ul class="dropdown-menu">
+                <li><a href="javascript:void(0);">iQ User Manual</a></li>
+                <li><a href="javascript:void(0);">Request help</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <div class="row">
+      <aside class="panel-group" id="accordion">
+        <div class="panel panel-default">
+          <div class="panel-heading" id="headingOne"> <a class="collapsed panel-title" data-toggle="collapse" href="#collapseOne"><i class="fa fa-dashboard"></i>Dashboard</a> </div>
+          <div id="collapseOne" class="panel-collapse collapse">
+            <div class="panel-body">
+              <ul class="nav">
+                <li><a href="javascript:void(0);">Docket Manager</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading" id="headingTwo"> <a class="collapsed panel-title" data-toggle="collapse" href="#collapseTwo"><i class="fa fa-bar-chart"></i>Occurrences</a> </div>
+          <div id="collapseTwo" class="panel-collapse collapse">
+            <div class="panel-body">
+              <ul class="nav">
+                <li><a href="javascript:void(0);">Incidents</a></li>
+                <li><a href="javascript:void(0);">Claims</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading active" id="headingThree"> <a class="panel-title" data-toggle="collapse" href="#collapseThree"><i class="fa fa-user"></i>Administration</a> </div>
+          <div id="collapseThree" class="panel-collapse collapse in">
+            <div class="panel-body">
+              <ul class="nav">
+                <li><a href="javascript:void(0);">Accounts</a></li>
+                <li><a href="javascript:void(0);">Bank Accounts</a></li>
+                <li class="dropdown">
+                  <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">Code Maintenance <i class="fa fa-plus"></i></a>
+                  <ul class="nav nextmenu dropdown-menu">
+                    <li><a href="javascript:void(0);">Maintenance</a></li>
+                    <li><a href="javascript:void(0);">Maintenance</a></li>
+                    <li><a href="javascript:void(0);">Maintenance</a></li>
+                  </ul>
+                </li>
+                <li><a href="javascript:void(0);">Crawford Fee Schedule</a></li>
+                <li><a href="javascript:void(0);" class="active"><i class="fa fa-angle-right pull-left font-16 margin-top-minus-1"></i>Companies</a></li>
+                <li><a href="javascript:void(0);">Organizations</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading" id="headingFour"> <a class="collapsed panel-title" data-toggle="collapse" href="#collapseFour"><i class="fa fa-file"></i>Reports</a> </div>
+          <div id="collapseFour" class="panel-collapse collapse">
+            <div class="panel-body">
+              <ul class="nav">
+                <li><a href="javascript:void(0);">Standard Reports</a></li>
+                <li><a href="javascript:void(0);">My Reports</a></li>
+                <li><a href="javascript:void(0);">Scheduled Reports</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading" id="headingFive"> <a class="collapsed panel-title" data-toggle="collapse" href="#collapseFive"><i class="fa fa-address-card"></i>Psr</a> </div>
+          <div id="collapseFive" class="panel-collapse collapse">
+            <div class="panel-body">
+              <ul class="nav">
+                <li><a href="javascript:void(0);">Psr</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <section>
+        <h2 class="hide">Section title would be here</h2>
+        <div class="col-sm-12">
+        </div>
+      </section>
+      <footer class="inner-footer navbar-fixed-bottom">
+        <div class="col-sm-12"><p>crawford iq portal - crawford & company (canada) inc.</p></div>
+      </footer>
+    </div>
+  </div>
+
+</template>

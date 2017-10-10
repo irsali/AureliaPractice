@@ -1,0 +1,65 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp1.1</TargetFramework>
+    <TypeScriptToolsVersion>2.3</TypeScriptToolsVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\index.html" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="src\utils\bootstrap-form-validation-renderer.js" />
+    <None Remove="src\utils\bootstrap-form-validation-renderer.js.map" />
+    <None Remove="src\utils\log.ts" />
+    <None Remove="src\views\dashboard\dashboard.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="src\js\script.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\index.html" />
+    <None Include="wwwroot\theme\css\font-awesome.css" />
+    <None Include="wwwroot\theme\css\style.css" />
+    <None Include="wwwroot\theme\css\style.css.map" />
+    <None Include="wwwroot\theme\fonts\fontawesome-webfont.eot" />
+    <None Include="wwwroot\theme\fonts\fontawesome-webfont.svg" />
+    <None Include="wwwroot\theme\fonts\fontawesome-webfont.ttf" />
+    <None Include="wwwroot\theme\fonts\fontawesome-webfont.woff" />
+    <None Include="wwwroot\theme\fonts\fontawesome-webfont.woff2" />
+    <None Include="wwwroot\theme\fonts\FontAwesome.otf" />
+    <None Include="wwwroot\theme\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="wwwroot\theme\fonts\glyphicons-halflings-regular.svg" />
+    <None Include="wwwroot\theme\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="wwwroot\theme\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="wwwroot\theme\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="wwwroot\theme\images\crowfordLogo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore" Version="1.1.2" />
+    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="1.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="src\utils\bootstrap3-form-validation-renderer.ts" />
+    <TypeScriptCompile Include="src\utils\bootstrap-form-validation-renderer.ts" />
+    <TypeScriptCompile Include="src\utils\index.ts" />
+    <TypeScriptCompile Include="src\utils\log.ts" />
+    <TypeScriptCompile Include="src\views\dashboard\dashboard.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="src\utils\index - Copy.js.map">
+      <DependentUpon>index - Copy.js</DependentUpon>
+    </None>
+    <None Update="src\utils\index.js">
+      <DependentUpon>index.ts</DependentUpon>
+    </None>
+  </ItemGroup>
+
+</Project>
