@@ -1,6 +1,6 @@
 import {Aurelia} from 'aurelia-framework'
 import environment from './environment';
-import { AuthorizeStep } from './app';
+import { AuthorizeStep } from "./authorize-step";
 
 export function configure(aurelia: Aurelia) {
   aurelia.use

@@ -1,0 +1,11 @@
+define(["require", "exports"], function (require, exports) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", { value: true });
+    var LoginModel = (function () {
+        function LoginModel() {
+        }
+        return LoginModel;
+    }());
+    exports.LoginModel = LoginModel;
+});
+//# sourceMappingURL=login-model.js.map

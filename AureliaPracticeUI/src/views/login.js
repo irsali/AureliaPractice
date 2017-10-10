@@ -7,16 +7,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-define(["require", "exports", "../app", "../utils/index", "aurelia-framework", "aurelia-validation", "aurelia-router"], function (require, exports, app_1, index_1, aurelia_framework_1, aurelia_validation_1, aurelia_router_1) {
+define(["require", "exports", "../utils/index", "aurelia-framework", "aurelia-validation", "aurelia-router", "../model/index", "../authorize-step"], function (require, exports, index_1, aurelia_framework_1, aurelia_validation_1, aurelia_router_1, index_2, authorize_step_1) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     var Login = (function () {
         function Login(appRouter, controller) {
             this.appRouter = appRouter;
             this.controller = controller;
-            this.isLogin = app_1.AuthorizeStep.IsLogin;
-            this.loginModel = new LoginModel();
-            this.controller.addRenderer(new index_1.BootstrapFormValidationRenderer3());
+            this.isLogin = authorize_step_1.AuthorizeStep.IsLogin;
+            this.loginModel = new index_2.LoginModel();
+            this.controller.addRenderer(new index_1.Bootstrap3FormValidationRenderer());
             this.controller.addObject(this.loginModel, this.getValidationRules());
         }
         Login.prototype.getValidationRules = function () {
@@ -37,13 +37,15 @@ define(["require", "exports", "../app", "../utils/index", "aurelia-framework", "
             this.controller.validate()
                 .then(function (result) {
                 if (result.valid) {
-                    _this.isLogin = app_1.AuthorizeStep.IsLogin = true;
+                    _this.isLogin = authorize_step_1.AuthorizeStep.IsLogin = true;
+                    sessionStorage.setItem('loggedIn', _this.isLogin ? "true" : "false");
                     new aurelia_router_1.RedirectToRoute('home').navigate(_this.appRouter);
                 }
             });
         };
         Login.prototype.logoutAction = function () {
-            this.isLogin = app_1.AuthorizeStep.IsLogin = false;
+            this.isLogin = authorize_step_1.AuthorizeStep.IsLogin = false;
+            sessionStorage.setItem('loggedIn', !this.isLogin ? "true" : "false");
         };
         return Login;
     }());
@@ -52,11 +54,5 @@ define(["require", "exports", "../app", "../utils/index", "aurelia-framework", "
         __metadata("design:paramtypes", [aurelia_router_1.AppRouter, aurelia_validation_1.ValidationController])
     ], Login);
     exports.Login = Login;
-    var LoginModel = (function () {
-        function LoginModel() {
-        }
-        return LoginModel;
-    }());
-    exports.LoginModel = LoginModel;
 });
 //# sourceMappingURL=login.js.map

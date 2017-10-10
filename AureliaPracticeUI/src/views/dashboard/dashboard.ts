@@ -1,6 +1,6 @@
-﻿import { AuthorizeStep } from '../../app'
-import { RedirectToRoute, AppRouter } from 'aurelia-router';
+﻿import { RedirectToRoute, AppRouter } from 'aurelia-router';
 import { autoinject } from 'aurelia-framework';
+import { AuthorizeStep } from "../../authorize-step";
 
 
 @autoinject()

@@ -10,14 +10,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="src\model\login-model.ts" />
     <None Remove="src\utils\bootstrap-form-validation-renderer.js" />
     <None Remove="src\utils\bootstrap-form-validation-renderer.js.map" />
     <None Remove="src\utils\log.ts" />
     <None Remove="src\views\dashboard\dashboard.ts" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="src\js\script.js" />
   </ItemGroup>
 
   <ItemGroup>
@@ -46,6 +43,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <TypeScriptCompile Include="src\model\index.ts" />
+    <TypeScriptCompile Include="src\model\login-model.ts" />
     <TypeScriptCompile Include="src\utils\bootstrap3-form-validation-renderer.ts" />
     <TypeScriptCompile Include="src\utils\bootstrap-form-validation-renderer.ts" />
     <TypeScriptCompile Include="src\utils\index.ts" />
@@ -54,6 +53,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="src\model\index.js">
+      <DependentUpon>index.ts</DependentUpon>
+    </None>
     <None Update="src\utils\index - Copy.js.map">
       <DependentUpon>index - Copy.js</DependentUpon>
     </None>
@@ -61,5 +63,9 @@
       <DependentUpon>index.ts</DependentUpon>
     </None>
   </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="au build" />
+  </Target>
 
 </Project>

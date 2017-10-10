@@ -1,4 +1,3 @@
-import { AuthorizeStep } from '../app';
 import { autoinject } from 'aurelia-framework';
 import { RouterConfiguration, Router, Redirect, RedirectToRoute, AppRouter } from 'aurelia-router';
 

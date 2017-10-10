@@ -1,9 +1,9 @@
-import { AuthorizeStep } from '../app';
 import { Bootstrap3FormValidationRenderer } from '../utils/index'
-
 import { inject, NewInstance } from 'aurelia-framework';
 import { ValidationController, ValidationRules, FluentRules, FluentRuleCustomizer } from 'aurelia-validation';
 import { Redirect, RedirectToRoute, AppRouter } from 'aurelia-router';
+import { LoginModel } from "../model/index";
+import { AuthorizeStep } from "../authorize-step";
 
 @inject(AppRouter, NewInstance.of(ValidationController))
 export class Login {
@@ -53,7 +53,4 @@ export class Login {
     }
 }
 
-export class LoginModel {
-    UserName: string;
-    Password: string;
-}
+
